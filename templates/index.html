@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>自然言語処理で歌詞を作ろう！</title>
+    <link rel="stylesheet" href="./static/style/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+</head>
+<body>
+ <div class="header">
+     <h1>Lyrics generator</h1>
+     <h3>歌詞を学習させてそのアーティストっぽい歌詞(文章)を生成するよ！</h3>
+ </div>
+ 
+ <div class="option">
+     <p class="select_sentence">アーティストを選択</p>
+
+     <form action="/" method="POST" enctype="multipart/form-data">
+
+        <select name="select_artist" id="select_artist">
+            <option value="0">Official髭男dism</option>
+            <option value="1">米津玄師</option>
+            <option value="2">back number</option>
+            <option value="3">Mr.Children</option>
+            <option value="4">嵐</option>
+            <option value="5">King Gnu</option>
+            <option value="6">ポルノグラフィティ</option>
+            <option value="7">安室奈美恵</option>
+        </select>
+        
+        <input id="generate" type="submit" value="Generate !">
+    </form>
+
+ </div>
+ <div class="result">
+     <h2>{{ artist_name }}</h2>
+     {% for lyric in lyrics %}
+     <p>{{ lyric }}</p>
+     {% endfor %}
+ </div>
+
+ <script type="text/javascript" src="./static/script/script.js"></script>
+</body>
+</html>

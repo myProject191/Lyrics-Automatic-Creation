@@ -1,0 +1,47 @@
+*{
+    background-color: rgb(240,240,240);
+}
+
+.header{
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.option{
+    text-align: center;
+    margin: 100px 0px;
+}
+
+.select_sentence{
+    text-align: center;
+    font-size: 22px;
+}
+
+#select_artist{
+    height: 40px;
+    width: 200px;
+    margin: 5px 30px;
+    border: 2px solid;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#generate{
+    font-size: 20px;
+    height: 40px;
+    width: 160px;
+    margin: 5px 30px;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(51,153,204);
+}
+
+#submit:hover{
+    background-color: rgba(51,153,204,0.9);
+}
+
+.result{
+    text-align: center;
+}
